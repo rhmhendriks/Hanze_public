@@ -1,6 +1,3 @@
-# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
-# van de speciale yamlsneltoetsen van mijn IDE. 
-
 virtualhost alternatief:
   file.append:
     - name: /etc/apache2/sites-available/wordpress.conf
@@ -27,13 +24,8 @@ Enable rewrite:
   apache_module.enabled:
     - name: rewrite
 
-apache2:
-  service.running:
-    - enable: True
-    - reload: True
-
 /etc/apache2/sites-available/wordpress.conf:
   file.touch
 
-WordpressDB:
-  mysql_database.present
+systemctl restart apache2.service:
+  cmd.run
