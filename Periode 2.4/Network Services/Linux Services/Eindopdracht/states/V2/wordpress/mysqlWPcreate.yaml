@@ -1,17 +1,14 @@
 # NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
 # van de speciale yamlsneltoetsen van mijn IDE. 
 
-/etc/wordpress/config-192.168.156.208.php:
+/etc/wordpress/config-192.168.156.209.php:
   file.touch
-
-WordpressDB:
-  mysql_database.present
 
 create_database_for_wordpress:
   mysql_user.present:
     - name: wordpress
     - host: localhost
-    - password: 'c30e3d8b53b8b502af1ede033f10a672'
+    - password_hash: '$6$tDrJhV8t$D/U2L7u2Mw2ehSp2ap272RpF8xgvUm0IsGPrjgudvJJeYAqS4NyAOp64aICuje3GeI1C3XpSV/HDjBnIsffn7.'
 
   mysql_grants.present:
     - grant: select,insert,update,delete,create,drop,alter
@@ -20,12 +17,12 @@ create_database_for_wordpress:
     - host: localhost
 
   file.append:
-    - name: /etc/wordpress/config-192.168.156.208.php
+    - name: /etc/wordpress/config-192.168.156.209.php
     - text:
       - '<?php'
       - 'define("DB_NAME", "WordpressDB");'
       - 'define("DB_USER", "wordpress");'
-      - 'define("DB_PASSWORD", "c30e3d8b53b8b502af1ede033f10a672");'
+      - 'define("DB_PASSWORD", "Wordpress012!");'
       - 'define("DB_HOST", "localhost");'
       - 'define("DB_COLLATE", "utf8_general_ci");'
       - 'define("WP_CONTENT_DIR", "/usr/share/wordpress/wp-content");'

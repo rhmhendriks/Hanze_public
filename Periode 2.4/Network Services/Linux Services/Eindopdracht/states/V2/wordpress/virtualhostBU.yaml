@@ -24,5 +24,13 @@ Enable rewrite:
   apache_module.enabled:
     - name: rewrite
 
+apache2:
+  service.running:
+    - enable: True
+    - reload: True
+
 /etc/apache2/sites-available/wordpress.conf:
   file.touch
+
+WordpressDB:
+  mysql_database.present
