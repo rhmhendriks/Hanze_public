@@ -5,4 +5,4 @@ set_localhost_root_password:
   mysql_user.present:
     - name: root
     - host: localhost
-    - password_hash: '$A$005$v^Z7TZ/L,a^#}*\{anB4iRCrXLlGONg33nodFCy0H1ixv.4w2d0Porssu63HC'
+    - password_hash: '<HASH!>'
