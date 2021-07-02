@@ -4,6 +4,9 @@
 /etc/wordpress/config-192.168.156.209.php:
   file.touch
 
+WordpressDB:
+  mysql_database.present
+
 create_database_for_wordpress:
   mysql_user.present:
     - name: wordpress
