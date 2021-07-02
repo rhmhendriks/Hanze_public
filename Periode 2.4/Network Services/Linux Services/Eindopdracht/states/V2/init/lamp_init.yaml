@@ -3,11 +3,11 @@
 
 setup lampserver packages:
    pkg.installed:
-      - pkgs:
-        - apache2
-        - php
-        - php-mysql
-        - libapache2-mod-php
-        - mysql-server
-        - mysql-client
-        - python3-mysqldb
+     - pkgs:
+       - apache2
+       - php
+       - php-mysql
+       - libapache2-mod-php
+       - mysql-server
+       - mysql-client
+       - python3-mysqldb

@@ -27,42 +27,12 @@ autoinstall:
         master: 192.168.156.89
       public_key: |
         -----BEGIN PUBLIC KEY-----
-        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4VcQZY/d+VBwQigqUnv
-        RgxzSBFLuOYsred0oEJdVmsmLAFZUoFV8JejM4lYZn7piP3yHmWf9lRqex1VgBq6
-        I4svyTU26p5dScM5u05Z4Ymq8usw52680WruZBamDcdgb9fV4H1s0PqKaMQOcCXW
-        v2F3toH87Tze6gDg3pPF0jm/fmrA8lAw0qYMEb3KYa0n3i4kDM4K+oGhFH2liLWH
-        cpJ6x0inueRAWZAUjf6RqQDK9QbIyGHn3OfQjqIVd1QTovrbPIwjz9Wyl5luDq5Q
-        Pk9g6uIA0Ke17tymGj3m3F6g9pGuZR/3o0wP2rOCLjpCrWzuaRC7cEukQ8cO96F5
-        4QIDAQAB
+        <omitted>
         -----END PUBLIC KEY-----
         
       private_key: |
         -----BEGIN RSA PRIVATE KEY-----
-        MIIEowIBAAKCAQEAo4VcQZY/d+VBwQigqUnvRgxzSBFLuOYsred0oEJdVmsmLAFZ
-        UoFV8JejM4lYZn7piP3yHmWf9lRqex1VgBq6I4svyTU26p5dScM5u05Z4Ymq8usw
-        52680WruZBamDcdgb9fV4H1s0PqKaMQOcCXWv2F3toH87Tze6gDg3pPF0jm/fmrA
-        8lAw0qYMEb3KYa0n3i4kDM4K+oGhFH2liLWHcpJ6x0inueRAWZAUjf6RqQDK9QbI
-        yGHn3OfQjqIVd1QTovrbPIwjz9Wyl5luDq5QPk9g6uIA0Ke17tymGj3m3F6g9pGu
-        ZR/3o0wP2rOCLjpCrWzuaRC7cEukQ8cO96F54QIDAQABAoIBAD/AOgAOAi+Nr02B
-        PhXSD9mI+BbkO1faURf5sVPbm8UZ4Bdu7TKH3wf+Lm/kv5SyLP0uOEtWhn9EWQEn
-        phJcGS7LUHWK7B6bYDZmSOc3/D28bOvo+rd3ymCA5nEaDWI41WW1SZqMe7SbwQNo
-        UFKzxd32M3RxiDi7rxKfBgxwo0K6hTzC2Dv0irLgXZDNPVvZZ5pNUX9nslF/8bF0
-        PPv6HjPWiXC/rhfEJ85jg9uWtaBMUhKPTGeEKCz9/aU3eBx7C8LSgZp9D2iQhWcx
-        20VWInGepKY0TcWrWCvpmrLXdqQ89qrbhUVqTMljHcPFjWdDPfjPfCvnIq7fve9P
-        Yv36pxsCgYEAtZsJVxNCHPF1/nE9DIvGgKkXo9orqceMFtiuvjp/NwCpbaDm5Odu
-        iEJ2Pnbud1WlWCIzmwbYskti55wW6wKOukfuKh18o9DJcKFlwiw9s4Hmnq7ltyS2
-        i5dzzKuxS2CCYxR6A0VlvsezRao3YZa2QS6uja3kdfwof0CTLICIpI8CgYEA5oHJ
-        Nt1b5D5MDtZvIso0q2NtpCpEI+YIY7XMvrcCPywIaMJbdd5s7ScDc1aOFEs7ZyHS
-        7wGrW72h//Rw7o0BlUXYjUMVZHTvwLwU9RbSdrHjU/pHZzvsnkIM7jUhsNfWTRq5
-        nsz94stlf8WI73GUsh23a2m1FHlO2yOfRO1Mko8CgYAhcN8TbbRq5/u2UtvPB54R
-        6xEzVuVbaiddvaDP3q22TyTjzxE1bXhpFvP3JKdcyiScSg/+qBAXJNKdm5yMwffO
-        TZiJoMxmzfeKCe5XBxaFi5IP/lzGkLgclFL6iVMocikQXaDqIUlPDC7y0RlJmxsM
-        fbAe3rqHD1vVsupm83Q1+QKBgEWRF+wSBICu+H9l4iaqxhiPqnBoPSZkb1XAcWmB
-        jBEKtgL/3WCGX3N3Wcg+cCTZy7TFdYaih1fptHGuEUM9lSO67686dsNZs14EpYKO
-        f7hI2aXnnBMg97mPj514tZFMoqWkki7GCT2gSyKzuC8jpU/YPhoRzg++yLjEWHYR
-        9BErAoGBAIVQGX7ltofNPjyBU7Jw9LK1UgcbJaxlraAjRYELvir0LDLBDstrZLOd
-        xaK+cJlicm4qPLI/+cYLRz2Cgyg7/jxIWE9JvGqtGRfuzAFNBbTA7AXUcBvbhY1/
-        +j9at7TEiKewMA2FR8t/YLAGB7wL79gPw/lTB14/qC0W+hQGwxzV
+        <omitted>
         -----END RSA PRIVATE KEY-----
 
   late-commands:

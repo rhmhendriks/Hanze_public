@@ -1,5 +1,5 @@
-# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
-# van de speciale yamlsneltoetsen van mijn IDE. 
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken
+# van de speciale yamlsneltoetsen van mijn IDE.
 /etc/rsyslog.conf:
   file.append:
   - text: |
@@ -25,7 +25,7 @@
       input(type="imfile"
             File="/var/log/munin/munin-node.log"
             Tag="munin-node"
-            Severity="info")    
+            Severity="info")
       module(load="imuxsock") # provides support for local system logging
       module(load="imklog" permitnonkernelfacility="on")
       $RepeatedMsgReduction on
