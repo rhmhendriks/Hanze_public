@@ -1,0 +1,50 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+/etc/rsyslog.conf:
+  file.append:
+  - text: |
+      module(load="imfile" PollingInterval="1")
+      input(type="imfile"
+          File="/var/log/mysql/error.log"
+          stateFile="statefile-mysql-general"
+          Tag="mysql-general"
+          Severity="warning"
+          Facility="local1")
+      input(type="imfile"
+            File="/var/log/apache2/access.log"
+            Tag="apache2-access"
+            Severity="info")
+      input(type="imfile"
+            File="/var/log/apache2/error.log"
+            Tag="apache2-errors"
+            Severity="info")
+      input(type="imfile"
+            File="/var/log/munin/munin-node-configure.log"
+            Tag="munin-node-configuration"
+            Severity="info")
+      input(type="imfile"
+            File="/var/log/munin/munin-node.log"
+            Tag="munin-node"
+            Severity="info")    
+      module(load="imuxsock") # provides support for local system logging
+      module(load="imklog" permitnonkernelfacility="on")
+      $RepeatedMsgReduction on
+      $FileOwner syslog
+      $FileGroup adm
+      $FileCreateMode 0640
+      $DirCreateMode 0755
+      $Umask 0022
+      $PrivDropToUser syslog
+      $PrivDropToGroup syslog
+      *.* @192.168.156.89:514
+      *.* @@192.168.156.89:514
+      $ActionQueueFileName queue
+      $ActionQueueMaxDiskSpace 1g
+      $ActionQueueSaveOnShutdown on
+      $ActionQueueType LinkedList
+      $ActionResumeRetryCount -1
+
+rsyslog:
+  service.running:
+    - enable: True
+    - reload: True

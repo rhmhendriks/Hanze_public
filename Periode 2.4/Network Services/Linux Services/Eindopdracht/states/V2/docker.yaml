@@ -1,0 +1,6 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE.
+
+include:
+  - init.dockerRepo_init
+  - init.docker_init

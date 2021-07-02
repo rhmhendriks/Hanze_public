@@ -1,30 +1,24 @@
 # NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
 # van de speciale yamlsneltoetsen van mijn IDE. 
 
-create VHOST file for wordpress:
-
-  /etc/apache2/sites-available/wordpress.conf:
-    apache.configfile:
-      - config:
-        - VirtualHost:
-          this: '*:8080'
-          alias: '/blog /usr/share/wordpress'
-
-          Directory:
-            this: '/usr/share/wordpress'
-            Options:
-              - 'FollowSymLinks'
-            AllowOverride:
-              - 'Limit'
-              - 'Options'
-              - 'FileInfo'
-            DirectoryIndex: 'index.php'
-            Order: Allow,Deny
-            Allow from: all
-
-          Directory:
-            this: '/usr/share/wordpress/wp-content'
-            Options:
-              - 'FollowSymLinks'
-            Order: Allow,Deny
-            Allow from: all
+/etc/apache2/sites-available/wordpress.conf:
+  apache.configfile:
+    - config:
+      - alias: '/blog /usr/share/wordpress'
+      - Directory:
+        this: '/usr/share/wordpress'
+        Order: Allow,Deny
+        Allow from: all
+        Options:
+          - 'FollowSymLinks'
+        DirectoryIndex: 'index.php'
+        AllowOverride:
+          - 'Limit'
+          - 'Options'
+          - 'FileInfo'
+      - Directory:
+          this: '/usr/share/wordpress/wp-content'
+          Options:
+            - 'FollowSymLinks'
+          Order: Allow,Deny
+          Allow from: all

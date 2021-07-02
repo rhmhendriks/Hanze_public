@@ -65,4 +65,7 @@ autoinstall:
         +j9at7TEiKewMA2FR8t/YLAGB7wL79gPw/lTB14/qC0W+hQGwxzV
         -----END RSA PRIVATE KEY-----
 
+  late-commands:
+    salt-call state.highstate
+
         

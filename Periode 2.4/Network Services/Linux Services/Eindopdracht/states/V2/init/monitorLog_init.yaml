@@ -4,6 +4,6 @@
 setup log en monitoring packages:
    pkg.installed:
      - pkgs:
-       - name: munin-node
-       - name: rsyslog
+       - munin-node
+       - rsyslog
         

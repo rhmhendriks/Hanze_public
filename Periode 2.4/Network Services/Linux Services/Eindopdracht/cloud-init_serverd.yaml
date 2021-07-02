@@ -27,42 +27,44 @@ autoinstall:
         master: 192.168.156.89
       public_key: |
         -----BEGIN PUBLIC KEY-----
-        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4VcQZY/d+VBwQigqUnv
-        RgxzSBFLuOYsred0oEJdVmsmLAFZUoFV8JejM4lYZn7piP3yHmWf9lRqex1VgBq6
-        I4svyTU26p5dScM5u05Z4Ymq8usw52680WruZBamDcdgb9fV4H1s0PqKaMQOcCXW
-        v2F3toH87Tze6gDg3pPF0jm/fmrA8lAw0qYMEb3KYa0n3i4kDM4K+oGhFH2liLWH
-        cpJ6x0inueRAWZAUjf6RqQDK9QbIyGHn3OfQjqIVd1QTovrbPIwjz9Wyl5luDq5Q
-        Pk9g6uIA0Ke17tymGj3m3F6g9pGuZR/3o0wP2rOCLjpCrWzuaRC7cEukQ8cO96F5
-        4QIDAQAB
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvVjTxHV8l914zpzntzN6
+        XDrzrhMdU4cmeBi2qfGirz/kHkSNRwtt6CFwmHsUxlINFby1oKbSuqUzp7QHuZKy
+        REBQP8wUUxzRnjx+/H+cpNAL0a6c6g9byT7epu5rT9afy9aYswz6l+qtxxCqUwAG
+        CXJ+wt6sSi5S29CRuAqF5GoiHTA7i7kf/0i1/FKpfG2COhHHBstoTxt1npYoeVsd
+        fLAZcet+htTNjlFCWKjm/ka2Ymt3xRh50PwE9wqcvbhQEfm9FkDdF3WMzM57Zrdu
+        Us83BvAiEKKe7wKzt10I2MhR01JSxmL6QoKLcYUEm2PGpJ68khPRhta6dKIiQrI4
+        8wIDAQAB
         -----END PUBLIC KEY-----
         
       private_key: |
         -----BEGIN RSA PRIVATE KEY-----
-        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
+        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
         -----END RSA PRIVATE KEY-----
 
+  late-commands:
+    salt-call state.highstate
         

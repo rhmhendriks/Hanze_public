@@ -1,0 +1,24 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+/etc/munin/munin-node.conf:
+  file.absent
+
+munin_node_configuration:
+  file.append:
+    - name: /etc/munin/munin-node.conf
+    - text:
+      - 'log_level 4'
+      - 'log_file /var/log/munin/munin-node.log'
+      - 'pid_file /var/run/munin/munin-node.pid'
+      - 'background 1'
+      - 'setsid 1'
+      - 'user root'
+      - 'group root'
+      - 'allow ^192\.168\.156\.89$'
+      - 'allow ^::1$'
+
+munin-node:
+  service.running:
+    - enable: True
+    - reload: True
+
