@@ -31,6 +31,3 @@ apache2:
 
 /etc/apache2/sites-available/wordpress.conf:
   file.touch
-
-WordpressDB:
-  mysql_database.present
