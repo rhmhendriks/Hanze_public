@@ -1,0 +1,19 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+setup initial mysql:
+  pkg.installed:
+    - pkgs:
+      - debconf-utils
+
+  mysqlroot:
+    debconf.set:
+      - name: mysql-server
+      - data:
+        - 'mysql-server/root_password': {'type': 'password', 'value': 'Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi'}
+        - 'mysql-server/root_password_again': {'type': 'password', 'value': 'Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi'}
+
+  mysql:
+    service.running:
+      - enable: True
+      - reload: True

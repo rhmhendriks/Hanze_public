@@ -1,0 +1,34 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+initializing log and monitoring services:
+   pkg.installed:
+     - pkgs:
+       - name: munin-node
+       - name: rsyslog
+
+   file.replace:
+     - name: '/etc/munin/munin-node.conf'
+     - pattern: {{ 'allow ^127\.0\.0\.1$' |regex_escape }}
+     - repl: 'allow ^192\.168\.156\.89$'
+
+   file.append:
+     - name: '/etc/rsyslog.conf'
+     - text:
+       - 'module(load="imuxsock")'
+       - 'module(load="imklog" permitnonkernelfacility="on")'
+       - '*.* @192.168.156.89:514'
+       - '*.* @@192.168.156.89:514'
+       - '$ActionQueueFileNamequeue'
+       - '$ActionQueueMaxDiskSpace 1g'
+       - '$ActionQueueSaveOnShutdown on'
+       - '$ActionQueueType LinkedList'
+       - '$ActionResumeRetryCount -1'
+
+   service.running:
+     - rsyslog
+       - enable: True
+       - reload: True
+     - munin-node
+       - enabled: True
+       - reload: True

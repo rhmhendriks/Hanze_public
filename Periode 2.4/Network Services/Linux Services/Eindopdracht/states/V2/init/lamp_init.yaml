@@ -1,0 +1,12 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+setup lampserver packages:
+   pkg.installed:
+      - pkgs:
+        - apache2
+        - php
+        - php-mysql
+        - libapache2-mod-php
+        - mysql-server
+        - mysql-client

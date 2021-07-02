@@ -1,0 +1,15 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+salt parameters for mysql module:
+
+   file.append:
+     - name: /etc/salt/minion
+     - text:
+       - 'mysql.host: "localhost"'
+       - 'mysql.port: 3306'
+       - 'mysql.user: "root"'
+       - 'mysql.pass: "Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi"'
+       - 'mysql.db: "mysql"'
+       - 'mysql.unix_socket: "/tmp/mysql.sock"'
+       - 'mysql.charset: "utf8"'

@@ -1,0 +1,66 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+setup of lampserver with rsyslog logging:
+   pkg.installed:
+     - name: apache2
+     - name: php
+     - name: php-mysql
+     - name: libapache2-mod-php
+     - mysql-server
+     - mysql-client
+
+   file.append:
+     - name: /etc/rsyslog.conf
+     - text:
+       - '#MySQL Error log:'
+       - 'input(type="imfile"'
+       - '    File="/var/log/mysql/error.log"'
+       - '    stateFile="statefile-mysql-error"'
+       - '    Tag="mysql-error"'
+       - '    Severity="warning"'
+       - '    Facility="local1")'
+       - '# Apache access file:'
+       - 'input(type="imfile"'
+       - '      File="/var/log/apache2/access.log"'
+       - '      Tag="apache-access"'
+       - '      Severity="info")'
+       - '# Apache error file:'
+       - 'input(type="imfile"'
+       - '      File="/var/log/apache2/error.log"'
+       - '      Tag="apache-error"'
+       - '      Severity="info")'
+
+   pkg.installed:
+     - debconf-utils
+
+   mysqlroot:
+     debconf.set:
+       - data:
+         'mysql-server/root_password': {'type': 'password', 'value': 'Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi'}
+         'mysql-server/root_password_again': {'type': 'password', 'value': 'Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi'}
+
+   service.running:
+     - name: mysql
+     - name: apache2
+
+   rsyslog:
+     service.running:
+       - enable: True
+       - reload: True
+
+   file.append:
+     - name: /etc/salt/minion
+     - text:
+       - 'mysql.host: "localhost"'
+       - 'mysql.port: 3306'
+       - 'mysql.user: "root"'
+       - 'mysql.pass: "Y2Q0YjhhN2VkOWZhNDBhNzRkNGNkYWNi"'
+       - 'mysql.db: "mysql"'
+       - 'mysql.unix_socket: "/tmp/mysql.sock"'
+       - 'mysql.charset: "utf8"'
+
+   salt-minion:
+    service.running:
+      - enable: True
+      - reload: True

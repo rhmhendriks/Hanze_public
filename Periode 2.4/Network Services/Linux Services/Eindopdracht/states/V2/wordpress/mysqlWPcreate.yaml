@@ -1,0 +1,32 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+create database for wordpress:
+
+  wordpress:
+    mysql_user.present:
+      - host: localhost
+      - password: 'c30e3d8b53b8b502af1ede033f10a672'
+
+  WordpressDB:
+    mysql_database.present
+    mysql_grants.present:
+      - grant: select,insert,update,delete,create,drop,alter
+      - database: WordpressDB.*
+      - user: wordpress
+      - host: localhost
+
+  file.touch:
+    - '/etc/wordpress/config-localhost.php'
+
+  file.append:
+    - name: /etc/wordpress/config-localhost.php
+    - text: |
+      <?php
+      define('DB_NAME', 'WordpressDB');
+      define('DB_USER', 'wordpress');
+      define('DB_PASSWORD', 'c30e3d8b53b8b502af1ede033f10a672');
+      define('DB_HOST', 'localhost');
+      define('DB_COLLATE', 'utf8_general_ci');
+      define('WP_CONTENT_DIR', '/usr/share/wordpress/wp-content');
+      ?>

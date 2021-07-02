@@ -1,0 +1,16 @@
+# NOTE: Dit bestand is een YAML file. Dit om zo gebruik te maken 
+# van de speciale yamlsneltoetsen van mijn IDE. 
+
+base:
+  '*':
+    - monitorLogClient
+
+  'hanze24rhmheserverb':
+    - lampServer
+
+  'hanze24rhmheserverc':
+    - lampServer
+    - wordpress
+
+  'hanze24rhmheserverd':
+    - docker
